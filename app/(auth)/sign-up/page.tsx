@@ -44,7 +44,8 @@ const SignUp = () => {
         <>
             <h1 className="form-title">Sign Up & Personalize</h1>
 
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+            <form onSubmit={handleSubmit(onSubmit)} >
+                <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
                  <InputField
                      name="fullName"
                      label="Full Name"
@@ -121,7 +122,8 @@ const SignUp = () => {
                     {isSubmitting ? 'Creating Account' : 'Start Your Investing Journey'}
                  </Button>
                 
-                <FooterLink text="Already have an account?" linkText="Sihn in" href="/sign-in" />
+                <FooterLink text="Already have an account?" linkText="Sign in" href="/sign-in" />
+                </div>
             </form>
         </>
                     )
